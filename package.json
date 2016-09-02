@@ -1,0 +1,39 @@
+{
+  "name": "irapl",
+  "version": "0.0.1",
+  "description": "Registros Administrativos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertoraul/irapl.git"
+  },
+  "author": "rcard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertoraul/irapl/issues"
+  },
+  "homepage": "https://github.com/robertoraul/irapl#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chart.js": "^2.2.2",
+    "colors": "^1.1.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.1",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "gulp-eslint": "^3.0.1",
+    "justhtml": "0.0.1",
+    "lodash": "^4.15.0",
+    "mongodb": "^2.2.9",
+    "mongoose": "^4.5.10",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "winston": "^2.2.0",
+    "winston-mail": "^1.2.0",
+    "winston-mongodb": "^1.6.1"
+  }
+}

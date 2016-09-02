@@ -1,0 +1,51 @@
+{
+  "mode": "dev",
+  "crypto": {
+    "key": "60M3JbM5SsnnabfX5IH4r1Jme6iWE1g3",
+    "iv": "No8q8VSu8H0HgVX6",
+    "encoding": "base64"
+  },
+  "server": {
+    "port": 2250,
+    "request": {
+      "bodyParser": {
+        "extended": true
+      }
+    }
+  },
+  "connectionString": "localhost/prueba03?safe=true",
+  "auth": {
+    "loginPage": "/signin",
+    "sessionSecret": "WKTMYNrDM9ogjCfRL295LOrCrVA78KfPYwVInkXHJJWLr2e9a",
+    "masterKey": "pass"
+  },
+  "email": {
+    "name": "indec",
+    "host": "indec2.mecon.ar",
+    "auth": {
+      "user": "eticontacto",
+      "pass": "QI37lae8tF1m"
+    }
+  },
+  "winston": {
+    "mongodb": {
+      "silent": true,
+      "level": "error",
+      "db": "localhost/prueba03?safe=true",
+      "capped": true,
+      "handleExceptions": true
+    },
+    "mail": {
+      "silent": true,
+      "level": "error",
+      "from": "rcard@indec.mecon.gov.ar",
+      "to": "rcard@indec.mecon.gov.ar",
+      "host": "indec2.mecon.ar",
+      "username": "rcard",
+      "password": "QI37lae8tF1m",
+      "subject": "[GPSS-dev] {{level}} {{msg}}",
+      "html": true,
+      "handleExceptions": true
+    }
+  }
+}
