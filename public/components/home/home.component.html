@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Bienvenido al Gestor de Publicaciones, Suscripciones y Stock [GPSS]</h2>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row head-list">
+                <div class="col-sm-12">
+                    <h4>
+                        <label><span class="fa fa-info-circle"></span> Centro de Ayuda y Solicitudes</label>
+                    </h4>
+                </div>
+            </div>
+            <div  ng-class-even="'row-even'" ng-class-odd="'row-odd'" class="row">
+                <div class="col-sm-12" style="padding: 5px 5px;">
+                    <a ng-href="http://172.26.67.87:8085/servicedesk/customer/gpssdek" target="_blank">Haga click aquí
+                    para acceder al centro de ayuda de GPSS.</a>
+                </div>
+            </div>
+            <div ng-hide="true" class="row row-odd">
+                <div class="col-sm-12">
+                    <a href="http://172.26.65.164/intrasen/capacitacion/capacitacion.asp" target="_blank">Ver
+                        más</a>
+                </div>
+            </div>
+            <div class="footer-list"></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a ui-sref="home.changePassword">
+                        Cambiar mi contraseña
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div ng-hide="true" class="col-sm-6">
+            <div class="row head-list">
+                <div class="col-sm-6">
+                    <h4>
+                        <label><span class="fa fa-power-off"></span> Versión app tablet</label>
+                    </h4>
+                </div>
+                <div class="col-sm-6" style="padding-top: 5px;"><h4>Última actualización</h4></div>
+            </div>
+            <div class="row row-odd">
+                <div class="col-sm-6" style="padding: 5px 17px;">
+                    <label>{{mobileAppVersion.version}}</label>
+                </div>
+                <div class="col-sm-6" style="padding: 5px 17px;">
+                    {{vm.mobileAppVersion.updatedAt | dateTimeFormat}}
+                </div>
+            </div>
+            <div class="footer-list"></div>
+            <div class="alert alert-info">
+                <h4><strong>Novedades</strong></h4>
+                <hr/>
+                Recuerde que puede usar el usuario de capacitación para probar el cuestionario digital.
+                <br/>Usuario <strong>demo</strong>
+                <br/>Contraseña <strong>indec</strong>
+            </div>
+        </div>
+    </div>
+</div>

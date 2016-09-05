@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10">
+            <h2><span class="fa fa-stack-overflow"></span> Application log</h2>
+        </div>
+        <div class="col-sm-1">
+            <br/>
+            <button ng-click="$ctrl.refresh()" class="btn btn-primary">
+                <span class="fa fa-refresh"></span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-10 text-right"><a href="#/logs/sync">Sync logs</a></div>
+    </div>
+    <div class="row head-list">
+        <div class="col-sm-3"><label>Id/Timestamp</label></div>
+        <div class="col-sm-9"><label>Error</label></div>
+    </div>
+    <div ng-repeat="log in $ctrl.logs" ng-class-even="'row-even'" ng-class-odd="'row-odd'" class="row">
+        <div class="col-sm-3">
+            {{log._id}}<br/>
+            {{log.createdAt | dateTimeFormat}}
+        </div>
+        <div class="col-sm-9">{{log.stack}}</div>
+    </div>
+    <div class="footer-list"></div>
+</div>

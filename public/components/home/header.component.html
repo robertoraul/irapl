@@ -1,0 +1,148 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" ng-click="$ctrl.collapsed = !$ctrl.collapsed" class="navbar-toggle collapsed"
+                    data-toggle="collapse" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">
+                <img src="/images/logoIndecApaisadaW200.png" title="indec" alt="indec"/>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" uib-collapse="$ctrl.collapsed">
+            <ul class="nav navbar-nav">
+                <li uib-dropdown ng-role="{permission: $ctrl.userPermissionsEnum.USER_ADMIN}">
+                    <a uib-dropdown-toggle>
+                        <span class="fa fa-power-off" aria-hidden="true"></span> Sistema <span class="caret"></span>
+                    </a>
+                    <ul uib-dropdown-menu>
+                        <li>
+                            <a ui-sref="users.index" ng-class="{selected: $ctrl.location == '/users'}">
+                                <span class="fa fa-users"></span> Usuarios
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="branches.index" ng-class="{selected: $ctrl.location == '/branches'}">
+                                <span class="fa fa-building-o"></span> Locales
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li uib-dropdown ng-role="{permission: $ctrl.userPermissionsEnum.USER_ADMIN}">
+                    <a uib-dropdown-toggle>
+                        <span class="fa fa-truck" aria-hidden="true"></span> Difusión <span class="caret"></span>
+                    </a>
+                    <ul uib-dropdown-menu>
+                        <li>
+                            <a ui-sref="publications.index" ng-class="{selected: $ctrl.location == '/publications'}">
+                                <span class="fa fa-leanpub"></span> Publicaciones
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="books.index" ng-class="{selected: $ctrl.location == '/books'}">
+                                <span class="fa fa-book"></span> Libros
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="combos.index" ng-class="{selected: $ctrl.location == '/combos'}">
+                                <span class="fa fa-codepen"></span> Paquetes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li uib-dropdown
+                    ng-role="{branch: $ctrl.branchEnum.SELLS, permission: $ctrl.branchPermissionsEnum.CAN_WRITE}">
+                    <a uib-dropdown-toggle>
+                        <span class="fa fa-book" aria-hidden="true"></span> Suscripciones <span class="caret"></span>
+                    </a>
+                    <ul uib-dropdown-menu>
+                        <li>
+                            <a ui-sref="customers.index" ng-class="{selected: $ctrl.location == '/customers'}">
+                                <span class="fa fa-male"></span> Clientes
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="codes.index" ng-class="{selected: $ctrl.location == '/codes'}">
+                                <span class="fa fa-list-ol"></span> Códigos
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="groupers.index" ng-class="{selected: $ctrl.location == '/groupers'}">
+                                <span class="fa fa-users"></span> Agrupadores
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li uib-dropdown
+                    ng-role="{branch: $ctrl.branchEnum.LABEL_GENERATION, permission: $ctrl.branchPermissionsEnum.CAN_WRITE}">
+                    <a uib-dropdown-toggle>
+                        <span class="fa fa-envelope"></span> Armado de Envios <span class="caret"></span>
+                    </a>
+                    <ul uib-dropdown-menu>
+                        <li>
+                            <a ui-sref="pendingDeliveries.index" ng-class="{selected: $ctrl.location == '/pendingDeliveries'}">
+                                <span class="fa fa-clock-o"></span> Pendientes y Sobres
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="printJobQueue.index" ng-class="{selected: $ctrl.location == '/printJobQueue'}">
+                                <span class="fa fa-print"></span> Impresión de Etiquetas
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li uib-dropdown>
+                    <a uib-dropdown-toggle>
+                        <span class="fa fa-archive"></span> Stock <span class="caret"></span>
+                    </a>
+                    <ul uib-dropdown-menu>
+                        <li>
+                            <a ui-sref="stock.index" ng-class="{selected: $ctrl.location == '/stock'}">
+                                <span class="fa fa-archive"></span> Stock
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="stockTransfers.index" ng-class="{selected: $ctrl.location == '/stockTransfers'}">
+                                <span class="fa fa-exchange"></span> Recepción de Publicaciones
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="labelStockTransfers.index"
+                               ng-class="{selected: $ctrl.location == '/labelStockTransfers'}">
+                                <span class="fa fa-exchange"></span> Recepción de Sobres
+                            </a>
+                        </li>
+                        <li ng-role="{branch: $ctrl.branchEnum.SELLS, permission: $ctrl.branchPermissionsEnum.CAN_WRITE}">
+                            <a ui-sref="sales.index" ng-class="{salected: $ctrl.location == '/sales'}">
+                                <span class="fa fa-shopping-cart"></span> Ventas
+                            </a>
+                        </li>
+                        <li ng-role="{branch: $ctrl.branchEnum.MAILING, permission: $ctrl.branchPermissionsEnum.CAN_WRITE}">
+                            <a ui-sref="mailings.index" ng-class="{salected: $ctrl.location == '/mailings'}">
+                                <span class="fa fa-share"></span> Mailing
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="dispatches.index" ng-class="{salected: $ctrl.location == '/dispatches'}">
+                                <span class="fa fa-file-text-o"></span> Remitos
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/signout" title="Cerrar sesión">
+                        <span class="fa fa-sign-out"></span>
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

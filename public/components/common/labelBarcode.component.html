@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-8">
+        To: {{$ctrl.label.subscriber.name}}
+        <br/>
+        <span ng-show="$ctrl.label.subscriber.customer.company">
+            {{$ctrl.label.subscriber.customer.company}}
+            <br/>
+        </span>
+        <address-street address="$ctrl.label.subscriber.address"></address-street>
+        <br/>
+        <address-city address="$ctrl.label.subscriber.address"></address-city>
+        - {{$ctrl.label.subscriber.address.country}}
+        <br/>
+        (CP: {{$ctrl.label.subscriber.address.zipCode}})
+    </div>
+    <div class="col-xs-4 text-right">
+        <span ng-repeat="pendingDelivery in $ctrl.label.pendingDeliveries">
+            {{::pendingDelivery.book.publication.labelAbbreviation}}
+            <span ng-show="pendingDelivery.book.publication.isMagazine">
+                {{::pendingDelivery.book.magazine | magazine}}
+            </span>
+            <br/>
+        </span>
+    </div>
+</div>
+<barcode type="code39" string="{{$ctrl.getBarcodeString($ctrl.label.code)}}" options="$ctrl.barcodeOptions"
+         ng-show="$ctrl.label.code" class="barcode-container"></barcode>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scraper - Iniciar sesión &middot;</title>
+
+    <link rel="stylesheet" href="css/signin.css">
+</head>
+
+<body ng-app="scraper.signIn">
+
+<div ui-view></div>
+
+<!-- build:js({bower_components,public}) js/signin.js -->
+<script src="angular/angular.min.js"></script>
+<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="app/blocks/httpInterceptor.service.js"></script>
+
+<script src="app/common/common.module.js"></script>
+<script src="app/common/enterFocus.directive.js"></script>
+
+<script src="app/signIn/signIn.module.js"></script>
+<script src="app/signIn/signIn.controller.js"></script>
+<!-- endbuild -->
+</body>
+</html>

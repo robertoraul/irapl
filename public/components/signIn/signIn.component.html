@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <img src="images/logo.png" title="GPSS" alt="GPSS"/>
+        </div>
+    </div>
+    <br/>
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3><strong>Gestor de Publicaciones, Suscripciones y Stock</strong></h3>
+        </div>
+    </div>
+    <br/>
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h2>GPSS</h2>
+        </div>
+    </div>
+    <br/><br/>
+
+    <div class="row">
+        <div class="col-sm-12 text-left">
+            <form class="form-signin" ng-submit="$ctrl.signin()">
+                <h4>Inicie sesión</h4>
+                <input type="text" ng-model="$ctrl.username" enter-focus class="input-block-level" placeholder="Usuario"
+                       required>
+                <input type="password" ng-model="$ctrl.password" class="input-block-level" placeholder="Password" required>
+
+                <p ng-show="$ctrl.invalidLogin" class="red">
+                    Usuario o password no válidos.
+                </p>
+
+                <p ng-show="$ctrl.hasError" class="red">
+                    Ha ocurrido un error al tratar de iniciar sesión.
+                </p>
+                <p>
+                    <input type="submit" class="btn btn-large btn-primary" value="Ingresar"/>
+                    <a ui-sref="signIn.passwordRecovery">Olvidé mi password</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <br/><br/>
+</div>

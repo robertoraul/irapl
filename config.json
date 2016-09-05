@@ -13,7 +13,7 @@
       }
     }
   },
-  "connectionString": "localhost/prueba03?safe=true",
+  "connectionString": "mongodb://localhost/prueba03?safe=true",
   "auth": {
     "loginPage": "/signin",
     "sessionSecret": "WKTMYNrDM9ogjCfRL295LOrCrVA78KfPYwVInkXHJJWLr2e9a",
@@ -31,7 +31,7 @@
     "mongodb": {
       "silent": true,
       "level": "error",
-      "db": "localhost/prueba03?safe=true",
+      "db": "mongodb://localhost/prueba03?safe=true",
       "capped": true,
       "handleExceptions": true
     },
